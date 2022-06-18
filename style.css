@@ -1,6 +1,7 @@
 /* 1. Core Styles */
 /* 2. General element Styles */
-/* 3. Header Styles */
+/* 3. Header Styles & burger menu */
+/* 4. Features section styles */
 
 /* Core Styles  */
 
@@ -114,6 +115,9 @@ img {
   
 .lazy-img {
     filter: blur(20px);
+}
+.display__none1{
+    display: none;
 }
 
 /* ***************************************************** */
@@ -282,7 +286,48 @@ h4 {
 .menu-btn__burger::after{
     transform: translateY(16px);
 }
+
 /* ***************************************************** */
+/* Features section styles */
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin: 0 12rem;
+}
+  
+.features__img {
+    width: 100%;
+}
+  
+.features__feature {
+    align-self: center;
+    justify-self: center;
+    width: 70%;
+    font-size: 1.5rem;
+}
+  
+.features__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary-opacity);
+    height: 5.5rem;
+    width: 5.5rem;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+  
+.features__icon svg {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: var(--color-primary);
+}
+  
+.features__header {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
 
 
 
@@ -292,19 +337,17 @@ h4 {
 
 
 @media(max-width: 999px){
-    /* headersection */
+    /* Header section */
     .header h1{
         font-size: 4rem;
     }
-
-    /* burger menuni sozla */
+    /* Burger menuni sozla */
     .nav__links .nav__item{
         display: none;
         width: 100%;
         text-align: left;
         margin-bottom: 20px;
     }
-
     .nav__links {
         margin-top: 250px;
         padding: 50px;
@@ -312,17 +355,26 @@ h4 {
         width: 50%;
         flex-direction: column;
     }
-
     .menu-btn{
         display: block;
         z-index: 20;
     }
 
+    /* Features section */
+    .features__feature{
+        width: 100%;
+    }
 }
 
 @media(max-width: 768px) {
+    /* Header section */
     .nav{
         margin-bottom: 80px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .header{
+        margin-bottom: 150px;
     }
     .header__title{
         display: flex;
@@ -332,5 +384,40 @@ h4 {
     }
     .header__title button{
         margin-bottom: 70px;
+    }
+
+    /* Features section */
+    .section__title {
+        text-align: center;
+    }
+    .features{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0px 20px;
+    }
+    .features__feature{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .display__none1{
+        display: block;
+    }
+    .display__none2{
+        display: none;
+    }
+}
+
+@media(max-width: 576px){
+    .header{
+        margin-bottom: 10px;
+    }
+    /* features */
+    #section--1{
+        padding: 70px 10px;
+    }
+    .section__header{
+        font-size: 29px;
     }
 }

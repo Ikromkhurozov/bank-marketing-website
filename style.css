@@ -1,7 +1,13 @@
-/* 1. Core Styles */
-/* 2. General element Styles */
-/* 3. Header Styles & burger menu */
+/* 1. Core styles */
+/* 2. General element styles */
+/* 3. Header styles & burger menu */
 /* 4. Features section styles */
+/* 5. Operations section styles */
+/* 6. Testimonials section styles */
+/* 7. Slider */
+/* 8. Sign-up styles */
+/* 9. Footer section styles */
+/* 10. Media Queries | RWD */
 
 /* Core Styles  */
 
@@ -331,72 +337,59 @@ h4 {
 
 /* ***************************************************** */
 /* Operations section styles */
-
 .operations {
     max-width: 100rem;
     margin: 12rem auto 0 auto;
   
     background-color: #fff;
-}
-  
+} 
 .operations__tab-container {
     display: flex;
     justify-content: center;
-}
-  
+} 
 .operations__tab {
     margin-right: 2.5rem;
     transform: translateY(-50%);
-}
-  
+} 
 .operations__tab span {
     margin-right: 1rem;
     font-weight: 600;
     display: inline-block;
-}
-  
+} 
 .operations__tab--1 {
     background-color: var(--color-secondary);
-}
-  
+} 
 .operations__tab--1:hover {
     background-color: var(--color-secondary-darker);
-}
-  
+} 
 .operations__tab--3 {
     background-color: var(--color-tertiary);
     margin: 0;
-}
-  
+} 
 .operations__tab--3:hover {
     background-color: var(--color-tertiary-darker);
-}
-  
+} 
 .operations__tab--active {
     transform: translateY(-66%);
-}
-  
+} 
 .operations__content {
     display: none;
   
     /* JUST PRESENTATIONAL */
     font-size: 1.7rem;
     padding: 2.5rem 7rem 6.5rem 7rem;
-}
-  
+} 
 .operations__content--active {
     display: grid;
     grid-template-columns: 7rem 1fr;
     column-gap: 3rem;
     row-gap: 0.5rem;
-}
-  
+} 
 .operations__header {
     font-size: 2.25rem;
     font-weight: 500;
     align-self: center;
-}
-  
+} 
 .operations__icon {
     display: flex;
     align-items: center;
@@ -405,16 +398,13 @@ h4 {
     width: 7rem;
     border-radius: 50%;
 }
-  
 .operations__icon svg {
     height: 2.75rem;
     width: 2.75rem;
-}
-  
-  .operations__content p {
+} 
+.operations__content p {
     grid-column: 2;
-}
-  
+} 
 .operations__icon--1 {
     background-color: var(--color-secondary-opacity);
 }
@@ -426,7 +416,7 @@ h4 {
 }
 .operations__icon--1 svg {
     fill: var(--color-secondary-darker);
-  }
+}
 .operations__icon--2 svg {
     fill: var(--color-primary);
 }
@@ -610,10 +600,54 @@ h4 {
     padding: 2rem 5rem;
 }
 
+/* ***************************************************** */
+/* Footer section styles */
+.footer {
+    padding: 10rem 3rem;
+    background-color: #37383d;
+}
+  
+.footer__nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+}
+  
+.footer__item{
+    margin-right: 4rem;
+}
+  
+.footer__link {
+    font-size: 1.6rem;
+    color: #eee;
+    text-decoration: none;
+    transition: all .3s ease;    
+}
+  
+.footer__link:hover{
+    color: #0b9234;
+}
 
+.footer__logo {
+    height: 5rem;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
+  
+.footer__copyright {
+    font-size: 1.4rem;
+    color: #aaa;
+    text-align: center;
+}
+  
+.footer__copyright .footer__link {
+    font-size: 1.4rem;
+}
 
-
-
+/* Media Queries | Responsive web design */
 @media(max-width: 999px){
     /* Header section */
     .header h1{
@@ -724,5 +758,21 @@ h4 {
     }
     .operations__tab--1, .operations__tab--2{
         margin: 0px;
+    }
+    /* sign-up */
+    .section--sign-up {
+        padding: 7rem 3rem;
+    }
+    /* footer */
+    .footer{
+        padding: 7rem 3rem;
+    }
+    .footer__nav{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    .footer__item{
+        margin-right: 0;
     }
 }

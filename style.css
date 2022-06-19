@@ -723,18 +723,6 @@ h4 {
     opacity: 0;
 } 
   
-/* Cookie message */
-.cookie-message {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    background-color: white;
-    color: #bbb;
-    font-size: 1.5rem;
-    font-weight: 400;
-}
-  
 
 /* Media Queries | Responsive web design */
 @media(max-width: 999px){

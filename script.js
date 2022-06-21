@@ -34,7 +34,6 @@ const closeModal = function () {
 
 btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
 
-
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
 
@@ -58,4 +57,25 @@ document.querySelector('.nav__links').addEventListener('click', function(e) {
         const id = e.target.getAttribute('href');
         document.querySelector(id).scrollIntoView({behavior: 'smooth'});
     }
+});
+
+//Tabbed component
+tabsContainer.addEventListener('click', function(e) {
+    const clicked = e.target.closest('.operations__tab');
+
+    // Guard clause
+    if(!clicked) return;
+
+    // Remove active classes
+    tabs.forEach(tab => tab.classList.remove('operations__tab--active'));
+    tabsContent.forEach(content => content.classList.remove('operations__content--active'))
+    
+    // Active tab
+    clicked.classList.add('operations__tab--active');
+
+    // Activate content area
+    document
+        .querySelector(`.operations__content--${clicked.dataset.tab}`)
+        .classList.add('operations__content--active')
+    ;
 });

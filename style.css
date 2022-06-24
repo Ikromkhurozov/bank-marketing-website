@@ -202,7 +202,15 @@ h4 {
     position: fixed;
     background-color: rgba(255, 255, 255, 0.95);
 }
-  
+ 
+.nav__logo-link{
+    text-decoration: none;
+    color: #09773a;
+}
+
+.nav__logo-link:hover{
+    color: #11934b;
+}
 .nav__logo {
     height: 4.5rem;
     transition: all 0.3s;
@@ -467,7 +475,8 @@ h4 {
   
 .testimonial__photo {
     grid-row: 1 / span 2;
-    width: 6.5rem;
+    width: 7.5rem;
+    height: 6.5rem;
     border-radius: 50%;
 }
   
@@ -606,6 +615,7 @@ h4 {
 .footer {
     padding: 10rem 3rem;
     background-color: #37383d;
+    box-shadow: 10px 10px 200px 10px #067d3b;
 }
   
 .footer__nav {

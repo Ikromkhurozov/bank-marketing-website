@@ -846,6 +846,18 @@ h4 {
         width: 5rem;
         height: 5rem;
     }
+
+    /* slider */
+    .slider {
+        max-width: 100rem;
+        height: 60rem;
+        margin: 0 auto;
+        position: relative;
+        text-align: center;
+    }
+    .testimonial__text span{
+        display: none;
+    }
 }
 
 @media(max-width: 525px){

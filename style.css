@@ -733,27 +733,38 @@ h4 {
     visibility: hidden;
     opacity: 0;
 } 
-  
-
 /* Media Queries | Responsive web design */
 @media(max-width: 999px){
     /* Header section */
     .header h1{
         font-size: 4rem;
     }
-    /* Burger menuni sozla */
+    .active{
+        display: flex !important;
+        animation: site-nav-slide-in .4s ease 1 forwards;
+    }
     .nav__links .nav__item{
         display: none;
         width: 100%;
-        text-align: left;
-        margin-bottom: 20px;
+        padding: 20px;
     }
-    .nav__links {
-        margin-top: 250px;
-        padding: 50px;
+    .nav__item:hover{
+        color: #039f49;
+        border-bottom: 1.5px #129f12 solid;
+    }
+    .nav__links {  
+        display: flex;
+        justify-content: space-between;
+        margin-top: 400px;
         align-items: center;
-        width: 50%;
+        height: auto;
         flex-direction: column;
+        background: #f6f6f6;
+        position: absolute;
+        width: 60%;
+        right: 0;
+        overflow: hidden; 
+        box-shadow: -10px 0 15px rgba(0, 0, 0, 0.3); 
     }
     .menu-btn{
         display: block;
@@ -874,5 +885,24 @@ h4 {
     }
     .modal__form{
         margin: 0px; 
+    }
+}
+
+/* Keyframes */
+@keyframes site-nav-slide-in {
+    from{
+        transform: translateX(120%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes site-nav-slide-out {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(120%);
     }
 }

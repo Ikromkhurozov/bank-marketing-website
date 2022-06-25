@@ -1,11 +1,17 @@
 "use strict";
 
-// const toggleBtn = documents.getElementsByClassName('menu-btn')[0]
-// const navbarLinks = documents.getElementsByClassName('nav__links')[0]
+const toggleBtn = document.getElementsByClassName('menu-btn')[0]
+const navbarLinks = document.getElementsByClassName('nav__links')[0]
 
-// toggleBtn.addEventListener('click', () => {
-//     navbarLinks.classList.toggle('active')
-// });
+const navItems = document.getElementsByClassName('nav__item')
+
+const arr = Array.from(navItems);
+console.log(navbarLinks);
+toggleBtn.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active');
+    arr.forEach(el => el.classList.toggle('active'));
+
+});
 
 ///////////////////////////////////////
 // Modal window
